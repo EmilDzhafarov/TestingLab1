@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/years_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/years_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="2"
+            android:hint="Enter years: "
+            android:inputType="number" />
+        
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/amount_money_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true">
+
+        <EditText
+            android:id="@+id/amount_money_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter amount of money: "
+            android:maxLength="10"
+            android:inputType="numberDecimal" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/loan_rate_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/loan_rate_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter loan rate (%): "
+            android:maxLength="3"
+            android:inputType="number" />
+
+    </android.support.design.widget.TextInputLayout>
+    
+    <Button
+        android:id="@+id/calc_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"/>
+    
+    <TextView
+        android:id="@+id/result_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:visibility="gone"/>
+    
+</LinearLayout>
